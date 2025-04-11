@@ -7,29 +7,119 @@
     <body>
         <h1><p align="center">BIBLIOTECA</p></h1>
         <b><p align="center">Bienvenido a la biblioteca</p></b>
-        <p align="center"><img src="/biblio/biblio.jpg" alt="Biblioteca" width="500" height=" "></p>
+        <p align="center"><img src="\public\biblio.jpg" alt="Biblioteca" width="500" height=" "></p>
         <p align="left"><img src="https://blog.pearsonlatam.com/hs-fs/hubfs/Blog%20HED/Multimedia/Im%C3%A1genes%20de%20Blog/contenidos-de-biblioteca-virtual-para-elearning.jpg?width=800&name=contenidos-de-biblioteca-virtual-para-elearning.jpg" alt="Drama" width="300" height="200"></p>
         <p align="right"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJ0rYa886Xit4NKEjM1xa3aEzvHa86rW9jNQqiHyeGmmDE2s7473ke7vRSYCkx1htTf5-U-fpWXQQT8iOznyb1EdNFe_oSI01OVX7mTIIvGLz_dFOflZhNp5jEf52IjwitbgTzOusC-aE/s1600/La+Universidad+de+La+Plata+lanz%25C3%25B3+una+biblioteca+virtual+de+acceso+libre.jpg" alt="Drama" width="300" height="200"> <p align="left"></p>
         <a href = "https://booksmart.worldreader.org/home" target="_blank">Biblioteca booksmart </a>
     </br>
         <a href = "https://ute.edu.ec/biblioteca/" target="_blank">Biblioteca UTE</a>
-        <table bgcolor="#f5f5f5" border="1">
-    <tr>
-        <th bgcolor="#ffffff"  border="1">Horario de Biblioteca</th>
-    </tr>
-    <tr>
-        <th>Día</th>
-        <th>Hora de Apertura</th>
-        <th>Hora de Cierre</th>
-        <th>Observaciones</th>
-    </tr>
-    <tr>
-        <td>Lunes a Viernes</td>
-        <td>08:00</td>
-        <td>18:00</td>
-        <td>Servicio completo</td>
-    </tr>
-    
+    <p>
+    <table align="center" bgcolor="#f5f5f5" border="1">
+        <tr>
+            <th bgcolor="#00ffff"  border="1"colspan="4" align="center">Atención Biblioteca Virtual</th>
+        </tr>
+        <tr>
+            <th>Día</th>
+            <th>Hora de inicio</th>
+            <th>Hora de fin</th>
+            <th>Servicio Disponible</th>
+        </tr>
+        <tr>
+            <td>Lunes a Viernes</td>
+            <td>08:00</td>
+            <td>20:00</td>
+            <td>Chat en vivo, asistencia técnica, préstamos digitales</td>
+        </tr>
+        <tr>
+            <td>Sábado</td>
+            <td>09:00</td>
+            <td>14:00</td>
+            <td>Solo chat automático</td>
+        </tr>
+        <tr>
+            <td>Domingo</td>
+            <td colspan="2" align="center">Sin atención</td>
+            <td>Disponible acceso a libros 24/7</td>
+        </tr>
+    </table>
+    </p>
+    </body>
+    <body>
+        <form action="https://www.google.com.ec/?hl=es" method="POST">
+            <table>
+                <tr>
+                    <td>
+                        <label for="nombre">Nombre del lector</label >
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo">
+                    </td>
+                    <td>
+                        <label for="pais">País de residencia</label>
+                        <select id="pais" name="pais">
+                            <option value="Ec">Ecuador</option>
+                            <option value="Co">Colombia</option>
+                            <option value="Pe">Perú</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="direccion">Dirección de envío</label >
+                        <textarea id="direccion" name="direccion" placeholder="Dirección completa" rows="4" cols="20">
+                        Calle Principal 123
+                        </textarea>
+                    </td>
+                    <td>
+                        <label for="genero">Géneros favoritos</label>
+                        <select id="genero" name="generos" >
+                            <option value="ficcion">Ficción</option>
+                            <option value="no-ficcion">No Ficción</option>
+                            <option value="fantasia">Fantasía</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="frecuencia">Frecuencia de lectura</label >
+                        <input type="range" id="frecuencia" name="frecuencia">
+                    </td>
+                    <td>
+                        <label for="edad">Edad</label >
+                        <input type="number" id="edad" name="edad">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <label for="busqueda">Buscar libros</label>
+                    </td>
+                    <td>
+                        <input list="libros" id="busqueda" name="busqueda">
+                        <datalist id="libros">
+                            <option value="Cien años de soledad"></option>
+                            <option value="El Principito"></option>
+                            <option value="1984"></option>
+                            <option value="Don Quijote"></option>
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="formato">Formato preferido</label>
+                        <input type="radio" id="digital" name="formato">Digital
+                        <input type="radio" id="fisico" name="formato">Físico
+                    </td>
+                    <td>
+                        <label for="actividades">Actividades relacionadas</label>
+                        <input type="checkbox" id="leer" name="leer">Leer
+                        <input type="checkbox" id="reseñar" name="reseñar">Reseñar
+                        <input type="checkbox" id="recomendar" name="recomendar">Recomendar
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2">
+                        <button type="submit" value="Enviar">Registrarse</button>
+                    </td>
+                </tr>
+            </table>
     </body>
     
 </html>
