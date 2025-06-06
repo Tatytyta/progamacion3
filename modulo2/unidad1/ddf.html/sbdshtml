@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicios JavaScript</title>
+    <style>
+        .formulario {
+            margin: 20px;
+            padding: 20px;
+        }
+        input, textarea {
+            display: block;
+            margin: 10px 0;
+            width: 300px;
+        }
+        button {
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <script>
+        
+    </script>
+</body>
+</html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cambiar Color de Fondo</title>
+    <style>
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+
+        
+    </script>
+</body>
+</html>
+
+
+

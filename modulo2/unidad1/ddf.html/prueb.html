@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="formulario">
+        <h3>Ejercicio 2: Validación de formulario</h3>
+        <form id="miFormulario">
+            <input type="text" id="nombre" placeholder="Nombre completo">
+            <input type="email" id="email" placeholder="Correo electrónico">
+            <textarea id="mensaje" placeholder="Mensaje"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <div class="formulario">
+        <h3>Ejercicio 4: Cambiar color de fondo</h3>
+        <button id="cambiarColor">Cambiar Color</button>
+    </div>
+
+    <script>
+        // Validación del formulario
+        document.getElementById('miFormulario').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const mensaje = document.getElementById('mensaje').value;
+
+            if (!nombre || !email || !mensaje) {
+                alert('Por favor, complete todos los campos');
+                return;
+            }
+
+            alert('Formulario enviado correctamente');
+            this.reset();
+        });
+
+        // Cambiar color de fondo
+        document.getElementById('cambiarColor').addEventListener('click', function() {
+            const colores = ['#FFB6C1', '#98FB98', '#87CEFA', '#DDA0DD', '#F0E68C'];
+            const colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+            document.body.style.backgroundColor = colorAleatorio;
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const boton = document.getElementById('cambiacolor');
+            
+            boton.addEventListener('click', function() {
+                // Array de colores
+                const colores = [
+                '#FF6B6B',  // rojo claro
+                '#4ECDC4',  // turquesa
+                '#95E1D3',  // verde menta
+                '#FFE66D',  // amarillo
+                '#A8E6CF'   // verde claro
+                ];
+                
+                // Obtener color aleatorio
+                const colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+                
+                // Cambiar el color de fondo
+                document.body.style.backgroundColor = colorAleatorio;
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtener el formulario
+            const formulario = document.getElementById('mif');
+            
+            // Agregar evento de envío al formulario
+            formulario.addEventListener('submit', function(e) {
+                e.preventDefault(); // Prevenir el envío por defecto
+                
+                // Obtener valores de los campos
+                const nombre = document.getElementById('nombre').value.trim();
+                const correo = document.getElementById('correo').value.trim();
+                const mensaje = document.getElementById('mensaje').value.trim();
+                
+                // Validar campos
+                let errores = [];
+                
+                // Validar nombre
+                if (nombre === '') {
+                    errores.push('El nombre es obligatorio');
+                }
+                
+                // Validar correo
+                if (correo === '') {
+                    errores.push('El correo es obligatorio');
+                } else if (!validarCorreo(correo)) {
+                    errores.push('El correo no es válido');
+                }
+                
+                // Validar mensaje
+                if (mensaje === '') {
+                    errores.push('El mensaje es obligatorio');
+                }
+                
+                // Mostrar errores o enviar formulario
+                if (errores.length > 0) {
+                    alert(errores.join('\n'));
+                } else {
+                    alert('Formulario enviado correctamente');
+                    formulario.reset(); // Limpiar formulario
+                }
+            });
+            
+            // Función para validar formato de correo
+            function validarCorreo(correo) {
+                const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return regex.test(correo);
+            }
+        });
+    </script>
+</body>
+</html>
